@@ -18,7 +18,10 @@ export class ProductConatinerComponent implements OnInit {
     this.loadFirstFiveProducts();
   }
 
-  // Load first five products in store
+  /**
+   * Calls product service to loads first five products
+   * @returns {Void} Assigns promise response to variable firstFiveProducts$.
+   */
   loadFirstFiveProducts() {
     this.firstFiveProducts$ = this.productService.getFirstFiveProducts();
   }
