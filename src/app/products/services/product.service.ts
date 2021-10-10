@@ -17,9 +17,9 @@ export class ProductService {
   /**
    * Get first five products in the store
    *
-   * - Makes a request to fetch all products
+   * - Makes a request to fetch all the products
    * - Takes the first 5 products in the list
-   * - Parses and returns them
+   * - Parse and return the products
    */
   public getFirstFiveProducts(): Observable<any[]> {
     return this.http.get<Product[]>(this.apiUrl).pipe(

@@ -1,3 +1,4 @@
+<!-- Display product list -->
 <div class="product-grid my-2">
   <ng-container
     *ngIf="(firstFiveProducts$ | async) as firstFiveProducts; else productLoaders"
@@ -8,9 +9,10 @@
     ></app-product-list>
   </ng-container>
 </div>
+<!-- End of display product list -->
 
 <ng-template #productLoaders>
-  <!-- Display of 5 product loaders -->
+  <!-- Display product loaders -->
   <app-product-loader *ngFor="let _ of loader"></app-product-loader>
-  <!-- End display of 5 product loaders -->
+  <!-- End display product loaders -->
 </ng-template>
