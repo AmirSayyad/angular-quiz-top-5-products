@@ -1,0 +1,18 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-grid > * {
+  flex: 0 1 calc(20% - 16px);
+  margin: 8px;
+}
+
+
+/* Media styles */
+@media screen and (max-width: 650px) {
+  .product-grid > * {
+    flex: 1 1 100%;
+  }
+}
+/* End of media styles

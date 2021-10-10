@@ -1,0 +1,20 @@
+<div class="product shadow-md">
+  <div
+    class="product-header product-image"
+    [style.backgroundImage]="productImageUrl"
+  ></div>
+  <div class="product-body">
+    <span class="product-detail font-medium">
+      <a class="product-link text-gray-800" href="">
+        {{product.title}}
+      </a>
+    </span>
+    <span class="product-detail font-bold">${{product.price}}</span>
+    <span *ngIf="product.variants.length > 0" class="product-detail">
+      {{product.variants.length}} variant(s)
+    </span>
+    <button class="add-cart bg-gray-800 text-white font-bold">
+      Add to cart
+    </button>
+  </div>
+</div>

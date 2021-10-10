@@ -1,0 +1,16 @@
+<div class="product-grid my-2">
+  <ng-container
+    *ngIf="(firstFiveProducts$ | async) as firstFiveProducts; else productLoaders"
+  >
+    <app-product-list
+      *ngFor="let product of firstFiveProducts"
+      [product]="product"
+    ></app-product-list>
+  </ng-container>
+</div>
+
+<ng-template #productLoaders>
+  <!-- Display of 5 product loaders -->
+  <app-product-loader *ngFor="let _ of loader"></app-product-loader>
+  <!-- End display of 5 product loaders -->
+</ng-template>

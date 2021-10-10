@@ -1,0 +1,33 @@
+.product-image {
+  background: var(--grey-light);
+  animation: pulse 1.4s infinite;
+}
+
+.product-detail {
+  border-radius: var(--quarter-unit);
+  height: var(--one-unit);
+  width: 60%;
+  background-color: var(--grey-light);
+  margin-bottom: var(--half-unit);
+  animation: pulse 1.4s infinite;
+}
+
+.product-loader-detail.product-loader-detail-sm {
+  height: var(--ninths-unit);
+  margin-top: var(--half-unit);
+  width: 80%;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: var(--grey-light);
+  }
+
+  70% {
+    background-color: rgb(199, 199, 199);
+  }
+
+  100% {
+    background-color: var(--grey-light);
+  }
+}
